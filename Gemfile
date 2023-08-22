@@ -69,6 +69,9 @@ group :development do
   gem "rubocop-rails", require: false
   gem "rubocop-performance", require: false
 
+  # Needed by the ERB formatter extension for VS Code
+  gem "htmlbeautifier", require: false
+
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
