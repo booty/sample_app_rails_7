@@ -2,11 +2,11 @@
 
 # == Route Map
 #
-#             Prefix Verb URI Pattern                   Controller#Action
-#  static_pages_home GET  /static_pages/home(.:format)  static_pages#home
-#  static_pages_help GET  /static_pages/help(.:format)  static_pages#help
-# static_pages_about GET  /static_pages/about(.:format) static_pages#about
-#               root GET  /                             static_pages#home
+#  Prefix Verb URI Pattern        Controller#Action
+#    help GET  /help(.:format)    static_pages#help
+#   about GET  /about(.:format)   static_pages#about
+# contact GET  /contact(.:format) static_pages#contact
+#    root GET  /                  static_pages#home
 
 Rails.application.routes.draw do
   get "/help", to: "static_pages#help"
