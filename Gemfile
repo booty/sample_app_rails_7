@@ -42,9 +42,9 @@ gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
-# Use Sass to process CSS 
-gem "sassc-rails"
+# Use Sass to process CSS
 gem "bootstrap-sass"
+gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -66,8 +66,8 @@ group :development do
 
   # apparently Shopify's LSP needs this
   gem "rubocop", require: false
-  gem "rubocop-rails", require: false
   gem "rubocop-performance", require: false
+  gem "rubocop-rails", require: false
 
   # Needed by the ERB formatter extension for VS Code
   gem "htmlbeautifier", require: false
@@ -82,9 +82,10 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
-  gem "guard"
-  gem "guard-minitest"
+  gem "guard", require: false
+  gem "guard-minitest", require: false
   gem "minitest-reporters"
+  gem "rails-controller-testing"
   gem "selenium-webdriver"
   gem "webdrivers"
 end
