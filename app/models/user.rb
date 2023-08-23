@@ -2,11 +2,12 @@
 #
 # Table name: users
 #
-#  id         :integer          not null, primary key
-#  email      :string
-#  name       :string
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id              :integer          not null, primary key
+#  email           :string
+#  name            :string
+#  password_digest :string
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
 #
 # Indexes
 #
@@ -21,4 +22,11 @@ class User < ApplicationRecord
   validates :name, presence: true, length: { maximum: 50 }, uniqueness: { case_sensitive: false }
   validates :email, presence: true, length: { maximum: 255 }, format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
+  validates :password, presence: true, length: { minimum: 6 }
+
+  # adds User#authenticate method
+  # adds User#password= method
+  # adds User#password_confirmation= method
+  # User.authenticate("foobar") will hash "foobar" and compare it to the password_digest
+  has_secure_password
 end
