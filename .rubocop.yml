@@ -602,3 +602,6 @@ Style/NumericPredicate:
 
 Layout/LineContinuationLeadingSpace:
   Enabled: false
+
+Minitest/AssertPredicate:
+  Enabled: false
