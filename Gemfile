@@ -66,9 +66,9 @@ group :development do
 
   # apparently Shopify's LSP needs this
   gem "rubocop", require: false
+  gem "rubocop-minitest", require: false
   gem "rubocop-performance", require: false
   gem "rubocop-rails", require: false
-  gem "rubocop-minitest", require: false
 
   # Needed by the ERB formatter extension for VS Code
   gem "htmlbeautifier", require: false
