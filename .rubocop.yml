@@ -605,3 +605,6 @@ Layout/LineContinuationLeadingSpace:
 
 Minitest/AssertPredicate:
   Enabled: false
+
+Minitest/MultipleAssertions:
+  Enabled: false
