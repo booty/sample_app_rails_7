@@ -36,3 +36,4 @@
 
 # Yeah no
 /node_modules
+.DS_Store
