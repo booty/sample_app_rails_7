@@ -15,10 +15,7 @@
 #  index_users_on_name   (name) UNIQUE
 #
 
-one:
-  name: MyString
-  email: MyString
-
-two:
-  name: MyString2
-  email: MyString2
+hulkster:
+  name: Hulk Hogan
+  email: hulkamania@example.com
+  password_digest: <%= User.digest('password') %>

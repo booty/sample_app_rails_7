@@ -29,4 +29,14 @@ class User < ApplicationRecord
   # adds User#password_confirmation= method
   # User.authenticate("foobar") will hash "foobar" and compare it to the password_digest
   has_secure_password
+
+  # Returns the hash digest of the given string.
+  def self.digest(string)
+    cost = if ActiveModel::SecurePassword.min_cost
+             BCrypt::Engine::MIN_COST
+           else
+             BCrypt::Engine.cost
+           end
+    BCrypt::Password.create(string, cost:)
+  end
 end
